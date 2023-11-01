@@ -74,7 +74,7 @@ def get_option_data(cat: str, opt: str) -> (FillContext, ImageList):
 
     return ctx, images
 
-def long_input(msg: str):
+def long_input(msg: str) -> str:
     print("Pour ce champ, entre ton texte sur autant de lignes que tu veux puis appuie sur control + D pour valider.")
     print(msg)
     lines = []
@@ -121,7 +121,7 @@ def main() -> None:
                 ctx[f_name] = long_input(msg)
 
     tpl.render(ctx)
-    tpl.save(os.path.join(os.path.expanduser("~"), "Desktop", "Document.docx"))
+    tpl.save(os.path.join(os.path.expanduser("~"), "Desktop", "Contrat.docx"))
 
 if __name__ == "__main__":
     main()
